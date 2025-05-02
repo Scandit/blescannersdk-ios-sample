@@ -1,0 +1,15 @@
+{
+  "originHash" : "94eda50883bd41660dad97ea233e26660148997127d6f9644dfb15a9491edc3f",
+  "pins" : [
+    {
+      "identity" : "blescanner-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Scandit/blescanner-spm",
+      "state" : {
+        "revision" : "f066137b41a1ba445ec65a76b3efa784c4f3d9d3",
+        "version" : "1.1.4"
+      }
+    }
+  ],
+  "version" : 3
+}

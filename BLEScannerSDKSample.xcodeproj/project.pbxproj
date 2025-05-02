@@ -6,6 +6,23 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		521232C72DC4F823008377F1 /* BLEScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 521232C62DC4F823008377F1 /* BLEScannerSDK */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		521232672DC4C8FA008377F1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5269A7EE2DC4BC4A000F2BCD /* BLEScannerSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEScannerSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521232C72DC4F823008377F1 /* BLEScannerSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +86,7 @@
 				5269A7EA2DC4BC4A000F2BCD /* Sources */,
 				5269A7EB2DC4BC4A000F2BCD /* Frameworks */,
 				5269A7EC2DC4BC4A000F2BCD /* Resources */,
+				521232672DC4C8FA008377F1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -78,6 +97,7 @@
 			);
 			name = BLEScannerSDKSample;
 			packageProductDependencies = (
+				521232C62DC4F823008377F1 /* BLEScannerSDK */,
 			);
 			productName = BLEScannerSDKSample;
 			productReference = 5269A7EE2DC4BC4A000F2BCD /* BLEScannerSDKSample.app */;
@@ -107,6 +127,9 @@
 			);
 			mainGroup = 5269A7E52DC4BC4A000F2BCD;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5269A7EF2DC4BC4A000F2BCD /* Products */;
 			projectDirPath = "";
@@ -254,7 +277,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app requires a Bluetooth connection to receive barcodes from Scandit Express";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -311,7 +335,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app requires a Bluetooth connection to receive barcodes from Scandit Express";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -343,6 +368,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Scandit/blescanner-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		521232C62DC4F823008377F1 /* BLEScannerSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */;
+			productName = BLEScannerSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5269A7E62DC4BC4A000F2BCD /* Project object */;
 }
