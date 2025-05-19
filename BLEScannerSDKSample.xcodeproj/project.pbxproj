@@ -198,11 +198,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CCJEHQ4M9R;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 79D4J6BB7A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BLEScannerSDKSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -218,7 +218,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.scandit.BLEScannerSDKSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match Development *";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match InHouse *";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -375,7 +375,7 @@
 			repositoryURL = "https://github.com/Scandit/blescanner-spm";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.4;
+				minimumVersion = 1.1.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
