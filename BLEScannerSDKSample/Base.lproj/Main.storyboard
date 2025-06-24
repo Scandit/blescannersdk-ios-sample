@@ -17,19 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLEScannerSDK Sample" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7w-JF-RMD">
-                                <rect key="frame" x="89.5" y="48" width="235" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bluetooth Connection Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7w-JF-RMD">
+                                <rect key="frame" x="72" y="48" width="270" height="26"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uvS-vl-ut9">
-                                <rect key="frame" x="16" y="290" width="382" height="552"/>
-                                <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bkR-bH-m31">
                                 <rect key="frame" x="107" y="82" width="200" height="200"/>
                                 <constraints>
@@ -37,39 +30,50 @@
                                     <constraint firstAttribute="height" constant="200" id="Xuu-in-2LR"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7zC-uR-8g8">
+                                <rect key="frame" x="20" y="306" width="374" height="556"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="Fav-7r-0e1">
+                                        <rect key="frame" x="0.0" y="50" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Fav-7r-0e1" id="Ga4-6A-4Wj">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="dVS-ZI-A4E"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bkR-bH-m31" firstAttribute="top" secondItem="T7w-JF-RMD" secondAttribute="bottom" constant="8" symbolic="YES" id="3dr-7F-yiH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uvS-vl-ut9" secondAttribute="trailing" constant="16" id="Egr-kC-TrT"/>
+                            <constraint firstItem="7zC-uR-8g8" firstAttribute="top" secondItem="bkR-bH-m31" secondAttribute="bottom" constant="24" id="4SQ-dz-UkE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7zC-uR-8g8" secondAttribute="trailing" constant="20" id="76q-Jz-hTE"/>
                             <constraint firstItem="bkR-bH-m31" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QSl-Yz-rkm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uvS-vl-ut9" secondAttribute="bottom" constant="20" id="eUe-Lu-D0k"/>
+                            <constraint firstItem="7zC-uR-8g8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fSo-d6-JBC"/>
+                            <constraint firstItem="7zC-uR-8g8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gKK-Lf-585"/>
                             <constraint firstItem="T7w-JF-RMD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gfR-Bl-j1O"/>
-                            <constraint firstItem="uvS-vl-ut9" firstAttribute="top" secondItem="bkR-bH-m31" secondAttribute="bottom" constant="8" symbolic="YES" id="rHN-hu-TP8"/>
-                            <constraint firstItem="uvS-vl-ut9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="vq0-SP-kV4"/>
                             <constraint firstItem="T7w-JF-RMD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zru-Gt-3Tm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="bkR-bH-m31" id="TjE-gW-jpI"/>
-                        <outlet property="textView" destination="uvS-vl-ut9" id="S3d-Yx-Wfu"/>
+                        <outlet property="tableView" destination="7zC-uR-8g8" id="g1O-8r-rGV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.98050974512745" y="4"/>
+            <point key="canvasLocation" x="137.68115942028987" y="3.3482142857142856"/>
         </scene>
     </scenes>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

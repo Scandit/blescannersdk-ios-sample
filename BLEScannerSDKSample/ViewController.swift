@@ -9,10 +9,15 @@ import UIKit
 import BLEScannerSDK
 
 class ViewController: UIViewController {
+    private enum Consts {
+        static let reuseIdentifier = "tableViewCell"
+    }
+
     @IBOutlet private weak var imageView: UIImageView!
-    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var tableView: UITableView!
 
     private var host: WedgeHost?
+    private var events: [WedgeHostEvent] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,9 +31,12 @@ class ViewController: UIViewController {
                     return
                 }
 
-                let text = "Event: \(event.eventType), \(String(describing: event.data))\n"
-                textView.text = textView.text + text
+                let text = "Event: \(event.eventType), \(event.data ?? "-")\n"
                 print(text)
+                events.insert(event, at: 0)
+                tableView.insertRows(
+                    at: [.init(row: 0, section: 0)],
+                    with: .automatic)
             }
         )
 
@@ -36,3 +44,21 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        events.count
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: Consts.reuseIdentifier,
+            for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = "\(events[indexPath.row].eventType)"
+        content.secondaryText = events[indexPath.row].data
+        cell.contentConfiguration = content
+        return cell
+    }
+}
