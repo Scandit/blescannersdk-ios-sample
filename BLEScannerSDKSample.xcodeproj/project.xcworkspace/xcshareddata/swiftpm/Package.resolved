@@ -6,7 +6,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/Scandit/blescanner-spm",
       "state" : {
-        "revision" : "d610638d546b8a3922bdb553d63a8c455beb62b1",
+        "revision" : "59570adf3d1ad1556553a798599b60a20ef3c238",
         "version" : "1.1.5"
       }
     }

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		521232C72DC4F823008377F1 /* BLEScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 521232C62DC4F823008377F1 /* BLEScannerSDK */; };
+		52E308252EF064FA002F76FC /* BLEScannerSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 52E308242EF064FA002F76FC /* BLEScannerSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				521232C72DC4F823008377F1 /* BLEScannerSDK in Frameworks */,
+				52E308252EF064FA002F76FC /* BLEScannerSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = BLEScannerSDKSample;
 			packageProductDependencies = (
-				521232C62DC4F823008377F1 /* BLEScannerSDK */,
+				52E308242EF064FA002F76FC /* BLEScannerSDK */,
 			);
 			productName = BLEScannerSDKSample;
 			productReference = 5269A7EE2DC4BC4A000F2BCD /* BLEScannerSDKSample.app */;
@@ -128,7 +128,7 @@
 			mainGroup = 5269A7E52DC4BC4A000F2BCD;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */,
+				52E308232EF064FA002F76FC /* XCRemoteSwiftPackageReference "blescanner-spm" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 5269A7EF2DC4BC4A000F2BCD /* Products */;
@@ -370,7 +370,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */ = {
+		52E308232EF064FA002F76FC /* XCRemoteSwiftPackageReference "blescanner-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Scandit/blescanner-spm";
 			requirement = {
@@ -381,9 +381,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		521232C62DC4F823008377F1 /* BLEScannerSDK */ = {
+		52E308242EF064FA002F76FC /* BLEScannerSDK */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 521232C52DC4F823008377F1 /* XCRemoteSwiftPackageReference "blescanner-spm" */;
+			package = 52E308232EF064FA002F76FC /* XCRemoteSwiftPackageReference "blescanner-spm" */;
 			productName = BLEScannerSDK;
 		};
 /* End XCSwiftPackageProductDependency section */
